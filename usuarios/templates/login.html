@@ -1,0 +1,145 @@
+<html> <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
+		#divlogin{
+			width: 100%;
+			height: 100%;
+		}
+		.header{
+		}
+		#inputname{
+				width: 50%;
+			}
+			#inputpassword{
+				width: 50%;
+			}
+			#labelname{
+				margin-top:-18px;
+				padding: 30px;
+				float:left;
+			}
+			#labelpassword{
+				padding: 10px;
+				float:left;
+			}
+			#colizq{
+				display:inline-block;
+				white-space:nowrap;
+				overflow:hidden;
+			}
+			#coldrch{
+				margin-top: -10px;
+				display:inline-block;
+				white-space:nowrap;
+			}
+			.footer{
+				margin-top: 40px;
+			}
+			.ui-title{
+				margin-right: -0.5% !important;
+				margin-left: -0.5% !important;
+			}
+		}
+	
+	@media only screen 
+	and (min-device-width : 490px) {
+		.ui-header{
+			background:red;
+			height:6%;
+			width:100%;
+			box-shadow: 5px 5px 5px #888888;
+		}
+		#divlogin{
+			margin-top:10%;
+			border: 10px solid black;
+			width: 30%; 
+			height: 30%;
+		}
+		.footer{
+				margin-top: 20%;
+				height:10%;
+			}
+		}
+	
+	
+	</style>
+  {% load static %}
+  <!--
+  <link rel="stylesheet" href="{% static 'js/jquery.mobile-1.4.0/jquery.mobile-1.4.0.min.css' %}" />
+  <script src="{% static 'js/jquery.mobile-1.4.0/jquery.mobile-1.4.0.min.js' %}"></script>
+  -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"/>
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" media="screen and (min-device-width : 320px) and (max-device-width : 480px)"/>
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+  <!--
+  <script src="{% static 'js/jquery-2.0.3.js' %}"></script>
+  -->
+</head>
+
+<body>
+	<div id="globalcont" data-role="page">
+		<div class="ui-header" data-role="header" data-theme="b">
+		<h1 class="ui-title" style="padding: 0.5% 2%; ">SUPERMARKER</h1>
+	</div>
+	<form id="loginform" name="loginform" method="post" action="login.html">
+	<center>
+		<div id="divlogin">
+			<center>
+			<h1 style="font-size: 300%;" >Log in the system</h1>
+			
+			<div style="margin:5% 0px; ">
+				<span id="colizq">
+					<label id="labelname" style="font-size:150%"> Name: </label>
+					<input id="inputname" style="height:11%;" type="text" name="name">
+				</span>
+				<span id="coldrch">
+					<label id="labelpassword" style=" font-size:150%"> Password: </label>
+					<input id="inputpassword" style="height:11%; margin: 2% 0px;" type="text" name="password">
+				</span>
+			</div>
+			</center>
+			<center>
+			<div style=" ">
+				<a onclick="javascript:document.loginform.submit();">
+					<div id="button1" style="margin-left: 0px;">
+						<h2 style="padding: 4% 8%;">Log in</h2>
+					</div>
+				</a>
+			</div>
+			</center>
+		</div>
+	</center>
+	</form>
+	<footer>
+	<div class="footer" data-role="footer" data-theme="b">
+		<center>
+			<label>Created by Urtzi</label>
+		</center>
+	</div>
+	</footer>
+<script>
+  $('#button1').mousedown(function(){
+  $(this).css({
+  'background': 'white'       
+  });               
+}).mouseup(function(){
+  $(this).css({
+  'background': '#00BFFF'      
+  });               
+}).mouseout(function(){
+  $(this).css({
+  'background': '#7FFF00'   
+  });               
+}).mouseover(function(){
+  $(this).css({
+  'background': '#00BFFF'   
+  });               
+});
+</script>
+</div>
+</body> </html>

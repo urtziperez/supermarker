@@ -1,0 +1,373 @@
+<html class="html" style="">
+<head>
+  <meta charset="utf-8">
+  <title>SuperMarker</title>
+  <meta name="description" content="SlidesJS is a simple slideshow plugin for jQuery. Packed with a useful set of features to help novice and advanced developers alike create elegant and user-friendly slideshows.">
+  <meta name="author" content="Nathan Searles">
+
+  <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+  <meta name="viewport" content="width=device-width">
+  <!-- End SlidesJS Required -->
+  
+  
+  {% load static %}
+  <!-- CSS for slidesjs.com example -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" media="screen and (min-device-width : 320px) and (max-device-width : 480px)"/>
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js" media="screen and (min-device-width : 320px) and (max-device-width : 480px)"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js" media="screen and (min-device-width : 320px) and (max-device-width : 480px)"></script>
+  <script src="{% static 'js/jquery-2.0.3.js' %}"></script>
+  
+  <style>
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
+		.html{
+			background:#EEEEEE;
+		}
+		.header{
+		}
+		#divbuscar{
+			margin:0px 0px;
+			width: 100%;
+			text-align:center;
+			height: 100%;
+		}
+		#divizq{
+			display:none;
+		}
+		.footer{
+				margin-top: 100%;
+		}
+		.ui-title{
+			margin-right: -0.5% !important;
+			margin-left: -0.5% !important;
+			}
+		#textobienvenido{
+			margin: 0px 0px;
+		}
+		#divbuscarin{
+			margin: 0p 0px;
+			width: 100%; 
+			height: 20%;
+			backgorund:blue;
+		}
+		#labelbuscar{
+			padding: 0px 0px;
+			font-size: 23; 
+			margin: 0px 0px;
+		}
+		#inputbuscar{
+			height: 40%;
+			width: 50%;
+		}
+		#buttonbuscar{
+			margin: 0px 0px;
+		}
+		.buscarresult{
+			float:left;
+			margin-top: 30%;
+		}
+		#buttonmobile{
+			display:inline-block;
+				white-space:nowrap;
+				overflow:hidden;
+		}
+		#buttonlista{
+			float:left;
+			display:inline-block;
+				white-space:nowrap;
+				width:50%;
+		}
+		#buttonperfil{
+			display:inline-block;
+				white-space:nowrap;
+				width:50%;
+		}
+		.buttonsession {
+			background: #7FFF00;
+			margin-left: 0px;
+			width: 200px;
+			height: 50px;
+			border: 3px solid white;
+			box-shadow: 2px 2px 2px #888888;
+		}
+		}
+	
+	@media only screen 
+	and (min-device-width : 490px) {
+		.html{
+			background: green;
+		}
+		.ui-header{
+			background:red;
+			height:6%;
+			width:100%;
+			box-shadow: 5px 5px 5px #888888;
+		}
+		#divbuscar{
+			margin:0px 500px;
+			width: 65%;
+		}
+		#divizq{
+			border-right: 3px solid grey;
+			height: 93.5%;
+			float:left;
+			width: 20%;
+		}
+		.footer{
+				margin-top: 20%;
+				height:10%;
+			}
+		#textobienvenido{
+			margin: 20px 450px;
+		}
+		#divbuscarin{
+			margin: 100px 380px;
+			width: 500px; 
+			height: 300px;
+		}
+		#labelbuscar{
+			padding: 0px 50px;
+			font-size: 23; 
+			margin: 30px 0px;
+		}
+		#inputbuscar{
+			height: 30px;
+			width: 250px;
+		}
+		#buttonbuscar{
+			margin: 80px 130px;
+		}
+		.buscarresult{
+			float:left;
+		}
+		#buttonmobile{
+			display:none;
+		}
+		}
+	
+	
+	</style>
+  
+  <style type="text/css">
+  @keyframes move{
+    0% {transform: translateX(0px);} 
+	100% {transform: translateX(300px);} 
+  }
+  @-moz-keyframes move{
+    0% {-moz-transform: translateX(0px);} 
+	100% {-moz-transform: translateX(300px);}
+  }
+  @-webkit-keyframes move{
+    0% {-webkit-transform: translateX(0px);} 
+	100% {-webkit-transform: translateX(300px);} 
+  }
+  @-o-keyframes move{
+    0% {-o-transform: translateX(0px);} 
+	100% {-o-transform: translateX(300px);} 
+  }
+  
+  #button1{
+  
+    animation: move 1.5s;
+	
+	-moz-animation: move 1.5s; /* Firefox */ 
+	-webkit-animation: move 1.5s; /* Safari and Chrome */ 
+	-o-animation: move 1.5s; /* Opera */
+	-webkit-animation-fill-mode: forwards;
+	
+  }
+   #button2{
+    animation: move 1.5s; 
+	animation-delay: 0.25s;
+	-moz-animation: move 1.5s; /* Firefox */ 
+	-moz-animation-delay: 0.25s;
+	-webkit-animation: move 1.5s; /* Safari and Chrome */ 
+	-webkit-animation-delay: 0.25s;
+	-o-animation: move 3s; /* Opera */
+	-o-animation-delay: 0.25s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+   #button3{
+    animation: move 1.5s; 
+	animation-delay: 0.5;
+	-moz-animation: move 1.5s; /* Firefox */
+	-mozanimation-delay: 0.5s;
+	-webkit-animation: move 1.5s; /* Safari and Chrome */ 
+	-webkit-animation-delay: 0.5s;
+	-o-animation: move 1.5s; /* Opera */
+	-o-animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+   #button4{
+    animation: move 1.5s; 
+	animation-delay: 0.75s;
+	-moz-animation: move 1.5s; /* Firefox */ 
+	-moz-animation-delay: 0.75s;
+	-webkit-animation: move 1.5s; /* Safari and Chrome */ 
+	-webkit-animation-delay: 0.75s;
+	-o-animation: move 1.5s; /* Opera */
+	-o-animation-delay: 0.75s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+  
+  
+  @keyframes register{
+    0% {margin-left: 0px;}
+	100% {margin-left: 5px;} 
+  }
+  @-moz-keyframes register{
+    0% {margin-left: -300px;} 
+	100% {margin-left: 5px;} 
+  }
+  @-webkit-keyframes register{
+    0% {-webkit-transform: translateY(0px);} 
+	100% {-webkit-transform: translateY(900px);} 
+  }
+  @-o-keyframes register{
+    0% {margin-left: -300px;} 
+	100% {margin-left: 5px;}  
+  }
+  
+   .panelRegistro{
+    animation: register 3s; 
+	animation-delay: 1s;
+	-moz-animation: register 2s; /* Firefox */ 
+	-moz-animation-delay: 1s;
+	-webkit-animation: register 3s; /* Safari and Chrome */ 
+	-webkit-animation-delay: 1s;
+	-o-animation: register 2s; /* Opera */
+	-o-animation-delay: 1s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+</style> 
+  
+</head>
+
+<body data-role="page">
+
+	<div class="ui-header" data-role="header">
+    <h1 style="padding: 10px 40px; ">SUPERMARKER</h1>
+    </div> 
+	<center>
+	<span id="buttonmobile">
+	{% for row in param %}
+	{% if forloop.last %}
+	<a href="../../session/{{row.name}}/{{row.list}}">
+		<div class="buttonsession" id="buttonlista">
+			<h3 style="padding: 13px 20px;">Mi Lista</h3>
+		</div>
+	</a>
+	{% endif %}
+	{% endfor %}
+	<a href="">
+		<div class="buttonsession" id="buttonperfil">
+			<h3 style="padding: 13px 20px;">Mi Perfil</h3>
+		</div>
+	</a>
+  </span>
+	</center>
+	<div id="divizq">
+	{% for row in param %}
+	{% if forloop.last %}
+	<a href="../../session/{{row.name}}/{{row.list}}">
+	<div class="buttonsession" style="margin-top: 50%;">
+		<h2 style="padding: 10px 55px;">Mi Lista</h2>
+	</div>
+	</a>
+	{% endif %}
+	{% endfor %}
+	<div class="buttonsession" style="margin-top: 50px;">
+		<h2 style="padding: 10px 50px;">Mi Perfil</h2>
+	</div>
+	</div>
+	
+	
+	<form id="buscarform" name="buscarform" method="post" action=".">
+	
+	<div id="divbuscar">
+		{% for row in param %}
+		{% if forloop.last %}
+		<h1 id="textobienvenido">BIENVENIDO {{ row.name }}!!</h1>
+		{% endif %}
+		{% endfor %}
+		<div id="divbuscarin">
+		<center>
+		<label id="labelbuscar">Buscar:</label>
+		<input id="inputbuscar" type="text" name="buscar"></input>
+		<a onclick="javascript:document.buscarform.submit();">
+		<div id="buttonbuscar" class="button">
+			<h2 style="padding: 10px 65px;">Buscar</h2>
+		</div>
+		</a>
+		</center>
+		</div>
+		{% for rows in param %}
+		{% if forloop.first %}
+		{% for row in rows %}
+		<a href="../../session/{{row.user}}/add/{{row.name}}">
+		<div class="buscarresult">
+		<label style="margin: 0px 30px; font-size: 20;">{{row.name}}</label>
+		{% load static %}
+		 <div><img src="/static/img/{{row.name}}.jpg" width="200" style="margin: 0px 30px; height: 300px;"></div>
+		</div>
+		</a>
+		{% endfor %}
+		{% endif %}
+		{% endfor %}
+	</div>
+	
+	</form>
+	
+<script>
+  $('.button').mousedown(function(){
+  $(this).css({
+  'background': 'white'       
+  });               
+}).mouseup(function(){
+  $(this).css({
+  'background': '#00BFFF'      
+  });               
+}).mouseout(function(){
+  $(this).css({
+  'background': '#7FFF00'   
+  });               
+}).mouseover(function(){
+  $(this).css({
+  'background': '#00BFFF'   
+  });               
+});
+$('.buttonsession').mousedown(function(){
+  $(this).css({
+  'background': 'white'       
+  });               
+}).mouseup(function(){
+  $(this).css({
+  'background': '#00BFFF'      
+  });               
+}).mouseout(function(){
+  $(this).css({
+  'background': '#7FFF00'   
+  });               
+}).mouseover(function(){
+  $(this).css({
+  'background': '#00BFFF'   
+  });               
+});
+</script>
+</body>
+</html>

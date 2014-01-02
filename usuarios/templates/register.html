@@ -1,0 +1,58 @@
+<html> <head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <script src="{% static 'js/jquery-2.0.3.js' %}"></script>
+  <div class="header" style="background:red; top=500px;">
+    <h1 style="padding: 10px 40px; ">SUPERMARKER</h1>
+  </div>
+</head>
+<body>
+
+<form id="registerform" name="registerform" method="post" action="register.html">
+
+<div style="margin:200px 650px; border: 10px solid black; width: 550px; height: 400px; text-align:center;">
+  <h1 style="font-size: 50px;">Register yourself</h1>
+ 
+  <div style="margin: 60px 20px; width:500px; height: 140px;">
+	<label style=" margin: 0px 30px; font-size:23px; "> Name: </label>
+	<input style="margin: 0px 20px; height:30px;" type="text" name="name"><br><br>
+	<label style=" margin: 0px 12px; font-size:23px;"> Password: </label>
+	<input style=" height:30px;" type="password" name="password"><br><br>
+	<label style=" margin: 0px 30px; font-size:23px;"> Email: </label>
+	<input style=" margin: 0px 20px; height:30px;" type="text" name="email">
+  </div>
+  
+  
+  <div style="margin: -20px 30%; width: 200px; height: 50px;">
+  <a onclick="javascript:document.registerform.submit();">
+  <div class="buttonReg" style="margin-left: 0px;">
+	<h2 style="padding: 10px 20px;">Register</h2>
+  </div>
+  </a>
+  </div>
+ 
+</div>
+
+</form>
+
+<script>
+  $('.buttonReg').mousedown(function(){
+  $(this).css({
+  'background': 'white'       
+  });               
+}).mouseup(function(){
+  $(this).css({
+  'background': '#00BFFF'      
+  });               
+}).mouseout(function(){
+  $(this).css({
+  'background': 'red'   
+  });               
+}).mouseover(function(){
+  $(this).css({
+  'background': '#00BFFF'   
+  });               
+});
+</script>
+</body> </html>

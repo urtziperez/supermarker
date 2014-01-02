@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SuperMarker</title>
+  <meta name="description" content="SlidesJS is a simple slideshow plugin for jQuery. Packed with a useful set of features to help novice and advanced developers alike create elegant and user-friendly slideshows.">
+  <meta name="author" content="Nathan Searles">
+
+  <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- End SlidesJS Required -->
+  
+  
+  {% load static %}
+  <!-- CSS for slidesjs.com example -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" media="screen and (min-device-width : 320px) and (max-device-width : 480px)"/>
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+  <link rel="stylesheet" href="{% static 'js/woothemes-FlexSlider-ce5441b/flexslider.css' %}"/>
+  <script src="/static/js/woothemes-FlexSlider-ce5441b/jquery.flexslider.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+  <!--
+  <link rel="stylesheet" href="{% static 'css/example.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"> -->
+  <!-- End CSS for slidesjs.com example -->
+
+  
+  
+  <style type="text/css">
+  @keyframes move{
+    0% {transform: translateX(0px);} 
+	100% {transform: translateX(300px);} 
+  }
+  @-moz-keyframes move{
+    0% {-moz-transform: translateX(0px);} 
+	100% {-moz-transform: translateX(300px);}
+  }
+  @-webkit-keyframes move{
+    0% {-webkit-transform: translateX(0px);} 
+	100% {-webkit-transform: translateX(300px);} 
+  }
+  @-o-keyframes move{
+    0% {-o-transform: translateX(0px);} 
+	100% {-o-transform: translateX(300px);} 
+  }
+  
+  #button1{
+  
+    animation: move 1.5s;
+	
+	-moz-animation: move 1.5s; /* Firefox */ 
+	-webkit-animation: move 1.5s; /* Safari and Chrome */ 
+	-o-animation: move 1.5s; /* Opera */
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+   #button2{
+    animation: move 1.5s; 
+	animation-delay: 0.25s;
+	-moz-animation: move 1.5s; /* Firefox */ 
+	-moz-animation-delay: 0.25s;
+	-webkit-animation: move 1.5s; /* Safari and Chrome */ 
+	-webkit-animation-delay: 0.25s;
+	-o-animation: move 3s; /* Opera */
+	-o-animation-delay: 0.25s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+   #button3{
+    animation: move 1.5s; 
+	animation-delay: 0.5;
+	-moz-animation: move 1.5s; /* Firefox */
+	-mozanimation-delay: 0.5s;
+	-webkit-animation: move 1.5s; /* Safari and Chrome */ 
+	-webkit-animation-delay: 0.5s;
+	-o-animation: move 1.5s; /* Opera */
+	-o-animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+   #button4{
+    animation: move 1.5s; 
+	animation-delay: 0.75s;
+	-moz-animation: move 1.5s; /* Firefox */ 
+	-moz-animation-delay: 0.75s;
+	-webkit-animation: move 1.5s; /* Safari and Chrome */ 
+	-webkit-animation-delay: 0.75s;
+	-o-animation: move 1.5s; /* Opera */
+	-o-animation-delay: 0.75s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+  
+  
+  @keyframes register{
+    0% {-webkit-transform: translateY(0px);} 
+	100% {-webkit-transform: translateY(900px);} 
+  }
+  @-moz-keyframes register{
+    0% {-webkit-transform: translateY(0px);} 
+	100% {-webkit-transform: translateY(900px);} 
+  }
+  @-webkit-keyframes register{
+    0% {-webkit-transform: translateY(0px);} 
+	100% {-webkit-transform: translateY(900px);} 
+  }
+  @-o-keyframes register{
+    0% {-webkit-transform: translateY(0px);} 
+	100% {-webkit-transform: translateY(900px);}  
+  }
+  
+   .panelRegistro{
+    animation: register 3s; 
+	animation-delay: 1s;
+	-moz-animation: register 2s; /* Firefox */ 
+	-moz-animation-delay: 1s;
+	-webkit-animation: register 3s; /* Safari and Chrome */ 
+	-webkit-animation-delay: 1s;
+	-o-animation: register 2s; /* Opera */
+	-o-animation-delay: 1s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+  }
+</style>
+  
+<style>
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
+		#divlogin{
+			width: 100%;
+			height: 100%;
+		}
+		.header{
+		}
+		#divizq{
+			background:blue;
+		}
+		#divmed{
+			width: 60%; 
+			height: 100%;
+			background:red;
+		}
+		#divdrch{
+			
+		}
+		.panelRegistro
+			.footer{
+				margin-top: 40px;
+			}
+			.ui-title{
+				margin-right: -0.5% !important;
+				margin-left: -0.5% !important;
+			}
+		.container{
+			 padding: 0px;
+			 margin-right: 0;
+			 margin-left: 0;
+		}
+		#slides2{
+			width:100%;
+			height:100%;
+		}
+		}
+	
+	@media only screen 
+	and (min-device-width : 490px) {
+		.ui-header{
+			background:red;
+			height:6%;
+			width:100%;
+			box-shadow: 5px 5px 5px #888888;
+		}
+		#divizq{
+			width: 20%;
+			height: 100%;
+			float:left;
+		}
+		#divmed{
+			width: 60%; 
+			height: 100%; 
+			float:left;
+		}
+		#divdrch{
+			 width: 20%; 
+			 height: 100%; 
+			 float:left;
+		}
+		.footer{
+				margin-top: 20%;
+				height:10%;
+			}
+		}
+	
+	
+	</style>
+  
+  
+  
+  
+</head>
+<body style="background: green;">
+
+<div class="ui-header" data-role="header">
+    <h1 class="ui-title" style="padding: 10px 40px; ">SUPERMARKER</h1>
+</div> 
+<!--
+  <div id="col1">
+	<div class="menu">
+		<div id="button1">
+			<h2 style="padding: 10px 20px;">Inicio</h2>
+		</div>
+		<a href="login.html">
+		<div class="button2" id="button2">
+			<h3 style="padding: 13px 20px;">Entrar</h3>
+		</div>
+		</a>
+		<div class="button2"id="button3">
+			<h3 style="padding: 13px 20px;">Localiza tu tienda</h3>
+		</div>
+		<div class="button2" id="button4">
+			<h3 style="padding: 13px 20px;">Contáctanos</h3>
+		</div>
+	</div>
+  </div>
+  
+    <div class="container">
+
+      <div id="slides2" style="margin: 0px 100px;">
+        <img src="{% static 'img/example-slide-1.jpg' %}" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+        <img src="{% static 'img/example-slide-2.jpg' %}" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+        <img src="{% static 'img/example-slide-3.jpg' %}" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+        <img src="{% static 'img/example-slide-4.jpg' %}" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+        <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
+        <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
+      </div>
+
+    </div>
+	
+	<div class="panelRegistro">
+		<div style="margin: 20px 20px; border: 1px solid black; height: 260px; background: #40E0D0;">
+		<h2 style="padding: 30px; font-size: 20px;">¿Todavia no tienes tu cuenta?</h2>
+		<center>
+		<a href="register.html">
+		<div class="buttonReg">
+			<h2 style="padding: 2px; font-size: 30px;">Registrate</h2>
+		</div>
+		</a>
+		</center>
+		</div>
+	</div>
+	-->
+	
+	
+	<div id="divizq">
+	<center>
+		<div class="menu">
+		<div id="button1">
+			<h2 style="padding: 10px 20px;">Inicio</h2>
+		</div>
+		<a href="login.html">
+		<div class="button2" id="button2">
+			<h3 style="padding: 13px 20px;">Entrar</h3>
+		</div>
+		</a>
+		<div class="button2"id="button3">
+			<h3 style="padding: 13px 20px;">Localiza tu tienda</h3>
+		</div>
+		<div class="button2" id="button4">
+			<h3 style="padding: 13px 20px;">Contáctanos</h3>
+		</div>
+	</center>
+	</div>
+	</div>
+	
+	
+	
+	<div id="divmed" >
+	<!--
+	<div class="container">
+
+      <div id="slides2" >
+        <img src="{% static 'img/example-slide-1.jpg' %}" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+        <img src="{% static 'img/example-slide-2.jpg' %}" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+        <img src="{% static 'img/example-slide-3.jpg' %}" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+        <img src="{% static 'img/example-slide-4.jpg' %}" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+        <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
+        <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
+      </div>
+	-->
+    
+	
+	
+	<div id="mai" role="mai" style="">
+      <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+  	    	    <img src="/static/img/slide1.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="/static/img/slide2.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="/static/img/slide3.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="/static/img/slide4.jpg" />
+  	    		</li>
+          </ul>
+        </div>
+      </section>
+      
+    </div>
+	
+	</div>
+	
+	
+	
+	</div>
+	<div id="divdrch">
+	<center>
+		<div class="panelRegistro">
+		<div style="margin: 20px 20px; border: 1px solid black; height: 260px; background: #40E0D0;">
+		<h2 style="padding: 30px; font-size: 20px;">¿Todavia no tienes tu cuenta?</h2>
+		<center>
+		<a href="register.html">
+		<div class="buttonReg">
+			<h2 style="padding: 2px; font-size: 30px;">Registrate</h2>
+		</div>
+		</a>
+		</center>
+		</div>
+		</div>
+	</center>
+	</div>
+  <!-- End SlidesJS Required: Start Slides -->
+
+  <!-- SlidesJS Required: Link to jQuery -->
+  <script src="{% static 'js/jquery-2.0.3.js' %}"></script>
+  <!-- End SlidesJS Required -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+  <!-- SlidesJS Required: Link to jquery.slides.js 
+  <script src="{% static 'js/jquery.slides.min.js' %}"></script> 
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+  <!--
+  <script>
+    $(function() {
+      
+
+      /*
+        To have multiple slideshows on the same page
+        they just need to have separate IDs
+      */
+      $('#slides2').slidesjs({
+        width: 900,
+        height: 500,
+        navigation: false,
+        start: 3,
+        play: {
+          auto: true
+        }
+      });
+
+     
+    });
+  </script>
+  -->
+  <script>
+     $('.button2').mousedown(function(){
+  $(this).css({
+  'background': 'white'       
+  });               
+}).mouseup(function(){
+  $(this).css({
+  'background': '#00BFFF'      
+  });               
+}).mouseout(function(){
+  $(this).css({
+  'background': '#7FFF00'   
+  });               
+}).mouseover(function(){
+  $(this).css({
+  'background': '#00BFFF'   
+  });               
+});
+
+	 $('#button1').mousedown(function(){
+  $(this).css({
+  'background': 'white'       
+  });               
+}).mouseup(function(){
+  $(this).css({
+  'background': '#00BFFF'      
+  });               
+}).mouseout(function(){
+  $(this).css({
+  'background': '#7FFF00'   
+  });               
+}).mouseover(function(){
+  $(this).css({
+  'background': '#00BFFF'   
+  });               
+});
+
+     $('.buttonReg').mousedown(function(){
+  $(this).css({
+  'background': 'white'       
+  });               
+}).mouseup(function(){
+  $(this).css({
+  'background': '#00BFFF'      
+  });               
+}).mouseout(function(){
+  $(this).css({
+  'background': 'red'   
+  });               
+}).mouseover(function(){
+  $(this).css({
+  'background': '#00BFFF'   
+  });               
+});
+  </script>
+  <!-- End SlidesJS Required -->
+</body>
+</html>
