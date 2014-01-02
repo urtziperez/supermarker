@@ -100,5 +100,5 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-	'C:\Users\Urtzi\Desktop\Supermarker_Project_v2\supermarker\static'
+	'C:/Users/Urtzi/Desktop/Supermarker_Project_v2/supermarker/static'
 )
