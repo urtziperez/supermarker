@@ -99,3 +99,6 @@ PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+	'C:\Users\Urtzi\Desktop\Supermarker_Project_v2\supermarker\static'
+)
