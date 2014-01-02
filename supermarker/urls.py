@@ -8,4 +8,4 @@ admin.autodiscover()
 urlpatterns = patterns('supermarker',
     (r'^', include('usuarios.urls')),
 	
-)
+) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
