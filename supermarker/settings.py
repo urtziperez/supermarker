@@ -83,6 +83,7 @@ USE_TZ = True
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+MEDIA_URL = '/media/'
 
 # Static asset configuration
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
