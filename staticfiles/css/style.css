@@ -1,0 +1,174 @@
+/* CSS Resets */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
+
+
+/* ==================================================================================================================== */
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/* ==================================================================================================================== */
+
+.header {
+	/*background-image:url('../images/header.jpg');*/
+	margin: 0;
+	height: 60px;
+	box-shadow: 5px 5px 5px #888888;
+	/*border: 2px solid green*/
+}
+/*
+.menu {
+	padding: 10px 0px;
+	border: 2px solid green;
+	
+}
+*/
+
+body {
+	background: green;
+	width:100%;
+}
+
+#col1 {
+	padding: 200px 30px;
+    float:left;
+    width:20%;
+	height: 100%;
+}
+
+.menu {
+	float: left;
+	width: 150px;
+	height: 250px;
+}
+/*
+.button2{
+	display:block;
+	border-style:solid;
+	border-color:#bbb #888 #666 #aaa;
+	border-width:3px 4px 4px 3px;
+	width:9em;
+	height:2em;
+	background:#ccc;
+	color:#333;
+	line-height:2;
+	text-align:center;
+	text-decoration:none;
+	font-weight:900;
+}
+*/
+.button:hover{
+	background:#00BFFF;
+}
+
+.button2:hover{
+	background:#00BFFF;
+}
+
+#button1:hover{
+	background:#00BFFF;
+}
+
+.buttonsession {
+  background: #7FFF00;
+  margin-left: 95px;
+  width: 200px;
+  height: 50px;
+  border: 3px solid white;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+#button1 {
+  background: #7FFF00;
+  margin-left: -300px;
+  width: 200px;
+  height: 50px;
+  border: 3px solid white;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.button2 {
+  margin: 10px 0px;
+  background: #7FFF00;
+  margin-left: -300px;
+  width: 200px;
+  height: 50px;
+  border: 3px solid white;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.button {
+  background: #7FFF00;
+  width: 200px;
+  height: 50px;
+  border: 3px solid white;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.buttonReg {
+  margin: 10px 0px;
+  background: red;
+  width: 200px;
+  height: 50px;
+  border: 3px solid white;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.panelRegistro {
+  background: black;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px #888888;
+  margin: -1500px 1525px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+}
+
+/*
+#col2 {
+    width:80%;
+	height: 100%;
+}
+*/
+
+
+.site_wrap > .slides_wrap {
+			margin-bottom: 1em;
+			margin-left: -8px;
+			margin-right: -8px;
+		}
+
+		.img_slides_wrap {
+			width: 784px;
+			border: 8px solid #333333;
+			background-color: #444444;
+			overflow: hidden;
+		}
+
+		.img_slide {
+			padding: 0;
+		}
+
+		.js .img_slide {
+			/* Overide template's height transitions. */
+			width: 100%;
+			height: auto;
+		}
+
+		.slide_buttons_index {
+			text-align: center; 
+		}
+
+		.notransition,
+		.notransition .slide {
+			-webkit-transition-duration: 0 !important;
+			   -moz-transition-duration: 0 !important;
+			    -ms-transition-duration: 0 !important;
+			        transition-duration: 0 !important;
+		
+			-webkit-transition-delay: 0 !important;
+			   -moz-transition-delay: 0 !important;
+			    -ms-transition-delay: 0 !important;
+			        transition-delay: 0 !important;
+		}
