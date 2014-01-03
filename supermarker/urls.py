@@ -8,5 +8,4 @@ admin.autodiscover()
 
 urlpatterns = patterns('supermarker',
     (r'^', include('usuarios.urls')),
-	(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 )# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
