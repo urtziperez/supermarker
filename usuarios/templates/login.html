@@ -59,6 +59,13 @@
 				font-size: 40;
 				margin-top:30px;
 			}
+			#divbutton{
+				margin-top: 20px;
+			}
+			#divinf{
+				margin-top: 10px;
+				margin:0% 0px;
+			}
 		}
 	
 	@media only screen 
@@ -81,6 +88,9 @@
 			}
 		#textlogin{
 			font-size: 300%;
+		}
+		#divinf{
+			margin:5% 0px;
 		}
 		}
 	
@@ -109,7 +119,7 @@
 			<center>
 			<h1 id="textlogin">Log in the system</h1>
 			
-			<div style="margin:5% 0px; ">
+			<div id="divinf">
 				<span id="colizq">
 					<label id="labelname" style="font-size:150%"> Name: </label>
 					<input id="inputname" style="height:11%;" type="text" name="name">
@@ -121,7 +131,7 @@
 			</div>
 			</center>
 			<center>
-			<div style=" ">
+			<div id="divbutton">
 				<a onclick="javascript:document.loginform.submit();">
 					<div id="button1" style="margin-left: 0px;">
 						<h2 style="padding: 4% 8%;">Log in</h2>
