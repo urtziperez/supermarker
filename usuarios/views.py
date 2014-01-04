@@ -237,6 +237,7 @@ def lista(request,iduser,idlist):
 		'''
 
 def addproduct(request, iduser, idprod):
+	print "idrod: "+idprod;
 	dbproducts=SERVER['products']
 	dblist=SERVER['lists']
 	try:

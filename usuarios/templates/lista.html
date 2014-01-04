@@ -266,6 +266,9 @@
 			border: 1px solid black;
 			height: 30px;
 		}
+		.buttonmobile{
+			display:none;
+		}
 		}
 	
 	
@@ -281,21 +284,37 @@
     </div> 
 	
 	<div id="body">
+	
+	<center>
+	<span id="buttonmobile">
+	{% for row in param %}
+	{% if forloop.last %}
+	<a href="/session/{{row.name}}">
+	<div class="buttonsession" style="margin-top: 50%;">
+		<h2 style="padding: 10px 50px;">Productos</h2>
+	</div>
+	{% endif %}
+	{% endfor %}
+	<a href="">
+		<div class="buttonsession" id="buttonperfil">
+			<h3 style="padding: 13px 20px;">Mi Perfil</h3>
+		</div>
+	</a>
+  </span>
+	</center>
+	
 	<div  id="divizq">
 	{% for row in param %}
 	{% if forloop.last %}
 	<a href="/session/{{row.name}}">
 	<div class="buttonsession" style="margin-top: 50%;">
-		<h2 style="padding: 10px 60px;">Productos</h2>
+		<h2 style="padding: 10px 50px;">Productos</h2>
 	</div>
 	</a>
 	{% endif %}
 	{% endfor %}
 	<div class="buttonsession" style="margin-top: 50px;">
-		<h2 style="padding: 10px 65px;">Mi Lista</h2>
-	</div>
-	<div class="buttonsession" style="margin-top: 50px;">
-		<h2 style="padding: 10px 60px;">Mi Perfil</h2>
+		<h2 style="padding: 10px 50px;">Mi Perfil</h2>
 	</div>
 	</div>
 	
