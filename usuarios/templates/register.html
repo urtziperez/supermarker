@@ -11,9 +11,6 @@
 		.html{
 			background:green;
 		}
-		#body{
-			text-align:center;
-		}
 		.ui-header{
 			margin-bottom:3%;
 			margin:-7% 0;
@@ -40,6 +37,34 @@
 			width: 200px;
 			height: 50px;
 		}
+		#divinf{
+			margin: 0px 0px;
+			width:100%; 
+			height: 70%;
+		}
+		#labelname{
+			 margin: 0px 0px;
+			 font-size:23px;
+		}
+		#inputname{
+			margin: 0px 0px;
+			height:30px;
+		}
+		#labelpass{
+			margin: 0px 0px; 
+			font-size:23px;
+		}
+		#inputpass{
+			height:30px;
+		}
+		#labelemail{
+			margin: 0px 0px;
+			font-size:23px;
+		}
+		#inputemail{
+			margin: 0px 0px;
+			height:30px;
+		}
 		}
 	
 	@media only screen 
@@ -65,6 +90,34 @@
 			width: 200px;
 			height: 50px;
 		}
+		#divinf{
+			margin: 60px 20px;
+			width:500px; 
+			height: 140px;
+		}
+		#labelname{
+			 margin: 0px 30px;
+			 font-size:23px;
+		}
+		#inputname{
+			margin: 0px 20px;
+			height:30px;
+		}
+		#labelpass{
+			margin: 0px 12px; 
+			font-size:23px;
+		}
+		#inputpass{
+			height:30px;
+		}
+		#labelemail{
+			margin: 0px 30px;
+			font-size:23px;
+		}
+		#inputemail{
+			margin: 0px 20px;
+			height:30px;
+		}
 		}
 	
 </style>
@@ -79,13 +132,13 @@
 <div id="divmed">
   <h1 style="font-size: 50px;">Register yourself</h1>
  
-  <div style="margin: 60px 20px; width:500px; height: 140px;">
-	<label style=" margin: 0px 30px; font-size:23px; "> Name: </label>
-	<input style="margin: 0px 20px; height:30px;" type="text" name="name"><br><br>
-	<label style=" margin: 0px 12px; font-size:23px;"> Password: </label>
-	<input style=" height:30px;" type="password" name="password"><br><br>
-	<label style=" margin: 0px 30px; font-size:23px;"> Email: </label>
-	<input style=" margin: 0px 20px; height:30px;" type="text" name="email">
+  <div id="divinf">
+	<label id="labelname"> Name: </label>
+	<input id="inputname" type="text" name="name"><br><br>
+	<label id="labelpass"> Password: </label>
+	<input id="inputpass" type="password" name="password"><br><br>
+	<label id="labelemail"> Email: </label>
+	<input id="inputemail" type="text" name="email">
   </div>
   
   
