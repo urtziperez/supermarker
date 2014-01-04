@@ -131,6 +131,9 @@
 		.html{
 			background:green;
 		}
+		#body{
+			text-align:center;
+		}
 		.ui-header{
 			margin-bottom:3%;
 			margin:-7% 0;
@@ -242,6 +245,7 @@
     <h1 class="ui-title" style="padding: 10px 40px; ">SUPERMARKER</h1>
     </div> 
 	
+	<div id="body">
 	<div  id="divizq">
 	{% for row in param %}
 	{% if forloop.last %}
@@ -300,7 +304,7 @@
 		</div>
 	</div>
 	</form>
-
+	</div>
 <script>
 	function selectRow(rowNumber) {
 		var tr = document.getElementById('table')
