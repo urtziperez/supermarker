@@ -161,7 +161,9 @@
 			margin: 25px 0%;
 		}
 		#table{
-			display: none;
+			border: 1px solid black;
+			margin:10px 0px;
+			width:100%;
 		}
 		#buttonmobile{
 			width:100%;
@@ -225,6 +227,10 @@
 		#buttoncompra{
 			margin: 30px 700px;
 		}
+		#table{
+			border: 1px solid black;
+			margin:0px 510px;
+		}
 		}
 	
 	
@@ -265,7 +271,7 @@
 		<h1 id="textolista">Lista de {{ row.name }}</h1>
 		{% endif %}
 		{% endfor %}
-		<table id="table" width="600" style="border: 1px solid black; margin:0px 510px;" >
+		<table id="table" width="600">
 			<div>
 			<tr>
 				<td style="border: 1px solid black; font-size: 20px; height: 40px;" align="center"></td>
