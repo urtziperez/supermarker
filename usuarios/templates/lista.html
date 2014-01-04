@@ -192,6 +192,24 @@
 			border: 3px solid white;
 			box-shadow: 2px 2px 2px #888888;
 		}
+		.td1{
+			border: 1px solid black;
+			font-size: 10px;
+			height: 40px;
+		}
+		.td2{
+			border: 1px solid black;
+			font-size: 10px;
+		}
+		.td3{
+			border: 1px solid black;
+			font-size: 10px;
+		}
+		.td4{
+			border: 1px solid black;
+			height: 30px;
+			font-size: 10px;
+		}
 		}
 	
 	@media only screen 
@@ -231,6 +249,22 @@
 			border: 1px solid black;
 			margin:0px 510px;
 			width:600px;
+		}
+		.td1{
+			border: 1px solid black;
+			font-size: 20px;
+			height: 40px;
+		}
+		.td2{
+			border: 1px solid black;
+			font-size: 20px;
+		}
+		.td3{
+			border: 1px solid black;
+		}
+		.td4{
+			border: 1px solid black;
+			height: 30px;
 		}
 		}
 	
@@ -275,12 +309,12 @@
 		<table id="table">
 			<div>
 			<tr>
-				<td style="border: 1px solid black; font-size: 20px; height: 40px;" align="center"></td>
-				<td style="border: 1px solid black; font-size: 20px; height: 40px;" align="center">Numero</td>
-				<td style="border: 1px solid black; font-size: 20px;" align="center">Nombre</td>
-				<td style="border: 1px solid black; font-size: 20px;" align="center">Cantidad</td>
-				<td style="border: 1px solid black; font-size: 20px;" align="center">Imagen</td>
-				<td style="border: 1px solid black; font-size: 20px;" align="center">Precio</td>
+				<td class="td1" align="center"></td>
+				<td class="td1" align="center">Numero</td>
+				<td class="td2" align="center">Nombre</td>
+				<td class="td2" align="center">Cantidad</td>
+				<td class="td2" align="center">Imagen</td>
+				<td class="td2" align="center">Precio</td>
 			</tr>
 			</div>
 			{% for rows in param %}
@@ -288,12 +322,12 @@
 			{% for row in rows %}
 				<div style="text-align: center;">
 				<tr>
-				<td style="border: 1px solid black;" align="center"><input style="width: 20px; height: 50px;" type="checkbox" name="{{row.name}}" value="{{row.name}}" onclick="selectRow({{forloop.counter}})"></td>
-				<td style="border: 1px solid black; height: 30px;" align="center">{{ forloop.counter }}</td>
-				<td style="border: 1px solid black;" align="center">{{row.name}}</td>
-				<td style="border: 1px solid black;" align="center">{{row.cantidad}}</td>
-				<td style="border: 1px solid black;" align="center"><div><img src="/static/img/{{row.name}}.jpg" width="40" style="height: 40px;"></div></td>
-				<td style="border: 1px solid black;" align="center">{{row.precio}}€</td>
+				<td class="td3" align="center"><input style="width: 20px; height: 50px;" type="checkbox" name="{{row.name}}" value="{{row.name}}" onclick="selectRow({{forloop.counter}})"></td>
+				<td class="td4" align="center">{{ forloop.counter }}</td>
+				<td class="td3" align="center">{{row.name}}</td>
+				<td class="td3" align="center">{{row.cantidad}}</td>
+				<td class="td3" align="center"><div><img src="/static/img/{{row.name}}.jpg" width="40" style="height: 40px;"></div></td>
+				<td class="td3" align="center">{{row.precio}}€</td>
 				</tr>
 				</div>
 			{% endfor %}
