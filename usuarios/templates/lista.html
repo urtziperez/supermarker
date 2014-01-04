@@ -130,6 +130,7 @@
 	and (max-device-width : 480px) {
 		.html{
 			background:green;
+			text-align:center;
 		}
 		.ui-header{
 			margin-bottom:3%;
@@ -225,28 +226,8 @@
 			margin: 20px 43.5%;
 			width: 300px;
 		}
-		#divbuscarin{
-			margin: 100px 380px;
-			width: 500px; 
-			height: 300px;
-		}
-		#labelbuscar{
-			padding: 0px 50px;
-			font-size: 23; 
-			margin: 30px 0px;
-		}
-		#inputbuscar{
-			height: 30px;
-			width: 250px;
-		}
-		#buttonbuscar{
-			margin: 80px 130px;
-		}
-		.buscarresult{
-			float:left;
-		}
-		#buttonmobile{
-			display:none;
+		#buttoncompra{
+			margin: 30px 700px;
 		}
 		}
 	
@@ -315,7 +296,7 @@
 			{% endif %}
 			{% endfor %}
 		</table>
-		<div class="buttonReg" style="margin: 30px 700px;" name="submit" onclick="javascript:document.compraform.submit();">
+		<div id="buttoncompra" class="buttonReg" name="submit" onclick="javascript:document.compraform.submit();">
 			<h2 style="padding: 2px; font-size: 30px;">Comprar</h2>
 		</div>
 	</div>
