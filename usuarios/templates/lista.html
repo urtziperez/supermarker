@@ -6,127 +6,18 @@
   <meta name="author" content="Nathan Searles">
 
   <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <!-- End SlidesJS Required -->
   
   
   {% load static %}
   <!-- CSS for slidesjs.com example -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
-  <link rel="stylesheet" href="{% static 'css/example.css' %}">
-  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
   <script src="{% static 'js/jquery-2.0.3.js' %}"></script>
   <!-- End CSS for slidesjs.com example -->
 
   <!-- SlidesJS Optional: If you'd like to use this design -->
-  <style>
-   
-
-   
-
-    .slidesjs-navigation {
-      margin-top:3px;
-    }
-
-    .slidesjs-previous {
-      margin-right: 5px;
-      float: left;
-    }
-
-    .slidesjs-next {
-      margin-right: 5px;
-      float: left;
-    }
-
-    .slidesjs-pagination {
-      margin: 6px 0 0;
-      float: right;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 1px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(img/pagination.png);
-      background-position: 0 0;
-      float: left;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    a:link,
-    a:visited {
-      color: #333
-    }
-
-    a:hover,
-    a:active {
-      color: #9e2020
-    }
-
-    .navbar {
-      overflow: hidden
-    }
-  </style>
-  <!-- End SlidesJS Optional-->
-
-  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
-  <style>
-    #slides {
-      display: none
-    }
-
-    .container {
-      margin: 0 auto
-    }
-
-    /* For tablets & smart phones */
-    @media (max-width: 767px) {
-      body {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      .container {
-        width: auto
-      }
-    }
-
-    /* For smartphones */
-    @media (max-width: 480px) {
-      .container {
-        width: auto
-      }
-    }
-
-    /* For smaller displays like laptops */
-    @media (min-width: 768px) and (max-width: 979px) {
-      .container {
-        width: 724px
-      }
-    }
-
-    /* For larger displays */
-    @media (min-width: 1200px) {
-      .container {
-        width: 1170px
-      }
-    }
-  </style>
+  
   
   <style type="text/css">
   @keyframes move{
@@ -233,16 +124,145 @@
   }
 </style>
   
-  
-  <div class="header" style="background:red; top=500px;">
-    <h1 style="padding: 10px 40px; ">SUPERMARKER</h1>
-  </div> 
+ <style>
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
+		.html{
+			background:green;
+		}
+		.ui-header{
+			margin-bottom:3%;
+			margin:-7% 0;
+			background:red;
+			height:40px;
+			width:100%;
+			box-shadow: 5px 5px 5px #888888;
+			text-align:center;
+		}
+		.ui-title{
+				font-size: 16;
+		}
+		#divbuscar{
+			margin:0px 0px;
+			width: 100%;
+			text-align:center;
+			height: 100%;
+		}
+		#divizq{
+			display:none;
+		}
+		.footer{
+				margin-top: 100%;
+		}
+		.ui-title{
+			margin-top: 20px;
+			margin-right: -0.5% !important;
+			margin-left: -0.5% !important;
+			}
+		#textobienvenido{
+			margin: 20px; 0px;
+		}
+		#table{
+			display: none;
+		}
+		#buttonmobile{
+			width:100%;
+			display:inline-block;
+				white-space:nowrap;
+				overflow:hidden;
+				margin-top: 30px;
+		}
+		#buttonlista{
+			margin-left: 15px;
+			float:left;
+			display:inline-block;
+				white-space:nowrap;
+				width:40%;
+		}
+		#buttonperfil{
+			display:inline-block;
+				white-space:nowrap;
+				width:40%;
+		}
+		.buttonsession {
+			background: #7FFF00;
+			margin-left: 0px;
+			width: 200px;
+			height: 50px;
+			border: 3px solid white;
+			box-shadow: 2px 2px 2px #888888;
+		}
+		}
+	
+	@media only screen 
+	and (min-device-width : 490px) {
+		.html{
+			background: green;
+		}
+		.ui-header{
+			background:red;
+			height:6%;
+			width:100%;
+			box-shadow: 5px 5px 5px #888888;
+		}
+		#divlista{
+			 margin:0px 360px; 
+			 width: 80%; 
+			 text-align: center;
+		}
+		#divizq{
+			border-right: 3px solid grey;
+			height: 93.5%;
+			float:left;
+			width: 20%;
+		}
+		.footer{
+				margin-top: 20%;
+				height:10%;
+			}
+		#textolista{
+			margin: 20px 43.5%;
+			width: 300px;
+		}
+		#divbuscarin{
+			margin: 100px 380px;
+			width: 500px; 
+			height: 300px;
+		}
+		#labelbuscar{
+			padding: 0px 50px;
+			font-size: 23; 
+			margin: 30px 0px;
+		}
+		#inputbuscar{
+			height: 30px;
+			width: 250px;
+		}
+		#buttonbuscar{
+			margin: 80px 130px;
+		}
+		.buscarresult{
+			float:left;
+		}
+		#buttonmobile{
+			display:none;
+		}
+		}
+	
+	
+</style>
+ 
   
   
 </head>
 
 <body style="background:green;">
-	<div  style="border-right: 3px solid grey; height: 93.5%; float:left; width: 20%;">
+	<div class="ui-header" style="background:red; top=500px;">
+    <h1 class="ui-title" style="padding: 10px 40px; ">SUPERMARKER</h1>
+    </div> 
+	
+	<div  id="divizq">
 	{% for row in param %}
 	{% if forloop.last %}
 	<a href="/session/{{row.name}}">
@@ -259,11 +279,12 @@
 		<h2 style="padding: 10px 60px;">Mi Perfil</h2>
 	</div>
 	</div>
+	
 	<form id="compraform" name="compraform" method="post" action="#" enctype="multipart/form-data">
-	<div style=" margin:0px 360px; width: 80%; text-align: center;">
+	<div id="divlista">
 		{% for row in param %}
 		{% if forloop.last %}
-		<h1 style="margin: 20px 43.5%; width: 300px;">Lista de {{ row.name }}</h1>
+		<h1 id="textolista">Lista de {{ row.name }}</h1>
 		{% endif %}
 		{% endfor %}
 		<table id="table" width="600" style="border: 1px solid black; margin:0px 510px;" >
